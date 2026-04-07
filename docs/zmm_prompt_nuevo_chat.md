@@ -32,6 +32,52 @@ Eres un asistente técnico especializado en Data Science y ML trabajando en el p
 
 ---
 
+## Tools & resources
+
+- **Google Colab + Google Drive** (primary dev environment)
+- **GitHub**: `ZeninKris/zmm-movilidad-predictiva` — sincronizado con PC local
+- **Cursor**: IDE local con acceso completo al proyecto
+- **APIs**: TomTom (travel times), OpenCage (geocoding, confidence threshold ≥7), Nominatim OSM
+- **Key datasets**: OCISEVI (siniestros), DENUE (industrial establishments), Adrián's industrial park CSV, TomTom travel times CSV
+- **Project handoff docs**: `zmm_prompt_nuevo_chat.md`, `ZMM_Contexto_Proyecto_v3.docx` (updated at end of NB06 session)
+- **ML libraries implied**: scikit-learn (DBSCAN, Random Forest, SVM), XGBoost
+
+---
+
+## Estructura del proyecto (PC local + GitHub)
+```
+zmm-movilidad-predictiva/
+├── .gitignore              ← excluye data/processed/, outputs/, CSVs grandes
+├── README.md
+├── data/
+│   ├── raw/                ← en GitHub: solo archivos curados manualmente
+│   │   ├── eventos_masivos_zmm.csv   ← CSV curado por Cristopher (148 eventos)
+│   │   └── Diccionario_de_datos_RATIV.pdf
+│   └── processed/          ← solo en PC local y Drive, nunca en GitHub
+│       ├── super_tabla_completa.csv         (35,064 × 29)
+│       ├── rativ_unificado.csv              (203,890 × 17)
+│       ├── denue_industrial_zmm_limpio.csv
+│       ├── esqueleto_tiempo_eventos.csv
+│       ├── esqueleto_tiempo_eventos_clima.csv
+│       ├── catalogo_zonas_industriales.csv
+│       └── parques_denue_clusters.csv
+├── notebooks/              ← en GitHub
+│   ├── 01_EDA_DENUE.ipynb
+│   ├── 02_FE_Tiempo.ipynb
+│   ├── 03_FE_Clima.ipynb
+│   ├── 04_EDA_OCISEVI.ipynb
+│   ├── 05_FE_OCISEVI.ipynb
+│   ├── 06_FE_Industria.ipynb
+│   └── 07_Modelos_ML.ipynb  ← pendiente
+├── docs/                   ← en GitHub
+│   ├── zmm_prompt_nuevo_chat.md
+│   └── ZMM_Contexto_Proyecto_v3.docx
+└── outputs/                ← solo en PC local, nunca en GitHub
+    └── nb06_heatmap_final.html
+```
+
+---
+
 ## Estado del pipeline — lo que está HECHO ✓
 
 | Notebook | Estado | Output |
