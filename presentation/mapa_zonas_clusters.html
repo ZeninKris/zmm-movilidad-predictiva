@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f2c9754d43c26e302a6280f5ae9e37ce {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f2c9754d43c26e302a6280f5ae9e37ce" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f2c9754d43c26e302a6280f5ae9e37ce = L.map(
+                "map_f2c9754d43c26e302a6280f5ae9e37ce",
+                {
+                    center: [25.72, -100.28],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5fa7d61dabbc8bb66414379c73722fa2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5fa7d61dabbc8bb66414379c73722fa2.addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            var circle_marker_2323dfd475ee00427cc95333421adddf = L.circleMarker(
+                [25.704424442413792, -100.20790322551724],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.8, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_2323dfd475ee00427cc95333421adddf.bindTooltip(
+                `<div>
+                     Zona_2 - C1 - 336 sin - 29 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e352ff09b6c504dae034b4694dcd52e = L.circleMarker(
+                [25.80634604428571, -100.35018190595238],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_5e352ff09b6c504dae034b4694dcd52e.bindTooltip(
+                `<div>
+                     Parque Industrial Escobedo - C1 - 664 sin - 42 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4be1999c3a4a5ceecfd4af667664208 = L.circleMarker(
+                [25.77774919833333, -100.165902328],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_e4be1999c3a4a5ceecfd4af667664208.bindTooltip(
+                `<div>
+                     Parque Industrial Kronos - C1 - 95 sin - 16 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d88d06df2e505087515331daad16a8ca = L.circleMarker(
+                [25.6664807655, -100.1533053795],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d88d06df2e505087515331daad16a8ca.bindTooltip(
+                `<div>
+                     Kalos Guadalupe - C1 - 231 sin - 20 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1474ad3d5e373a03d59f777136abfb8b = L.circleMarker(
+                [25.65493675, -100.1773991288889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.25, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1474ad3d5e373a03d59f777136abfb8b.bindTooltip(
+                `<div>
+                     La Silla Guadalupe - C1 - 265 sin - 9 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_efb00b449c04bfb20c6cf8e37167cd71 = L.circleMarker(
+                [25.672205522105266, -100.44574292552632],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.65, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_efb00b449c04bfb20c6cf8e37167cd71.bindTooltip(
+                `<div>
+                     Zona_7 - C1 - 333 sin - 38 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a18e9c08c561185dfbb404b3cfc6d70 = L.circleMarker(
+                [25.68126764833333, -100.47269736666664],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_2a18e9c08c561185dfbb404b3cfc6d70.bindTooltip(
+                `<div>
+                     Nexxus Santa Catarina - C1 - 385 sin - 12 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8455a16c895d130b4e8287917412cff = L.circleMarker(
+                [25.745072263939395, -100.21655831303028],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_b8455a16c895d130b4e8287917412cff.bindTooltip(
+                `<div>
+                     Zona_9 - C1 - 48 sin - 33 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65cccbb71baaa9fe7b75bccdeb3824e9 = L.circleMarker(
+                [25.689163408846152, -100.47641131615386],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_65cccbb71baaa9fe7b75bccdeb3824e9.bindTooltip(
+                `<div>
+                     Parque Industrial Martel Santa Catarina - C1 - 251 sin - 26 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6fe4ab2f505d55485baf4864381ac87 = L.circleMarker(
+                [25.673021398461536, -100.4360257953846],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_b6fe4ab2f505d55485baf4864381ac87.bindTooltip(
+                `<div>
+                     Zona_12 - C1 - 521 sin - 13 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71b69318ebb001c7f3f4e4fe0cedc9d1 = L.circleMarker(
+                [25.723569343939392, -100.20872280666669],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_71b69318ebb001c7f3f4e4fe0cedc9d1.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-1 - C1 - 711 sin - 33 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b254856dc62afad10e649c324773c9f6 = L.circleMarker(
+                [25.77259528, -100.18112532571428],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_b254856dc62afad10e649c324773c9f6.bindTooltip(
+                `<div>
+                     Zona_15 - C2 - 24 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e7425807e736824262caf46ce7b1e80 = L.circleMarker(
+                [25.726400150714287, -100.25855443214286],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.3, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8e7425807e736824262caf46ce7b1e80.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-2 - C1 - 346 sin - 14 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2938e85ec57e275d9251f274b7ddea42 = L.circleMarker(
+                [25.71940627, -100.28555748206897],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_2938e85ec57e275d9251f274b7ddea42.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-3 - C1 - 441 sin - 29 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_786c82b8e2f7a64a61e6a70893559437 = L.circleMarker(
+                [25.67691818692308, -100.42448351230767],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_786c82b8e2f7a64a61e6a70893559437.bindTooltip(
+                `<div>
+                     Corredor Industrial Santa Catarina Centro - C1 - 2139 sin - 13 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6513411d04a461e32b24aaa1c98401d6 = L.circleMarker(
+                [25.66930144, -100.17510930875],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.8, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6513411d04a461e32b24aaa1c98401d6.bindTooltip(
+                `<div>
+                     Zona_21 - C1 - 176 sin - 16 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a957ea8afa7b81e853100e9dd7a6bc64 = L.circleMarker(
+                [25.715529791, -100.518278576],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.3, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a957ea8afa7b81e853100e9dd7a6bc64.bindTooltip(
+                `<div>
+                     STIVA Santa Catarina Industrial Park - C2 - 86 sin - 10 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c48214b07a7a4b09a5c5d649d57d0cac = L.circleMarker(
+                [25.67277152625, -100.19428117166666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c48214b07a7a4b09a5c5d649d57d0cac.bindTooltip(
+                `<div>
+                     Avante Guadalupe - C1 - 152 sin - 24 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_415171a0134b8cc4df32c7ef8fe3dfd1 = L.circleMarker(
+                [25.683219007777776, -100.45172119111112],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.2, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_415171a0134b8cc4df32c7ef8fe3dfd1.bindTooltip(
+                `<div>
+                     Zona_25 - C1 - 224 sin - 9 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6923c34648b407761a2323301ec43775 = L.circleMarker(
+                [25.754324725696204, -100.19450975240508],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.1, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6923c34648b407761a2323301ec43775.bindTooltip(
+                `<div>
+                     Parque Industrial Apodaca I - C1 - 262 sin - 79 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_697afc117daa87689c7d780aff0fe573 = L.circleMarker(
+                [25.76956778, -100.307891785],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_697afc117daa87689c7d780aff0fe573.bindTooltip(
+                `<div>
+                     Zona_27 - C1 - 1081 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d561e53684a13531216a2862fdb9d2d0 = L.circleMarker(
+                [25.696310048, -100.230807612],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d561e53684a13531216a2862fdb9d2d0.bindTooltip(
+                `<div>
+                     Zona_29 - C1 - 557 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8669fc7fa8c0ec36254f62972d8083b8 = L.circleMarker(
+                [25.693369176, -100.483108894],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8669fc7fa8c0ec36254f62972d8083b8.bindTooltip(
+                `<div>
+                     Parque Industrial Martel Santa Catarina - C2 - 24 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68016feab90b918f14d932b008774905 = L.circleMarker(
+                [25.704885759230766, -100.17769004923078],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.5, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_68016feab90b918f14d932b008774905.bindTooltip(
+                `<div>
+                     Parque Industrial Davisa Guadalupe - C1 - 110 sin - 13 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48a8b0146fcb65d1d68f41d85923cf8a = L.circleMarker(
+                [25.7713838572, -100.1696032588],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_48a8b0146fcb65d1d68f41d85923cf8a.bindTooltip(
+                `<div>
+                     Parque Industrial Monterrey - C1 - 155 sin - 25 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a84736498a7a93be7c4b2363376ff06c = L.circleMarker(
+                [25.829993365, -100.251961],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a84736498a7a93be7c4b2363376ff06c.bindTooltip(
+                `<div>
+                     Zona_36 - C0 - 47 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1cdbaf8057aa84f2ac0cb7c4c06809d = L.circleMarker(
+                [25.74585762888889, -100.16900956222224],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.05, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f1cdbaf8057aa84f2ac0cb7c4c06809d.bindTooltip(
+                `<div>
+                     HubsPark Apodaca - C1 - 241 sin - 9 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2979f316fb488b994a1fa0f191f03e3 = L.circleMarker(
+                [25.695223697142858, -100.15666032428572],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a2979f316fb488b994a1fa0f191f03e3.bindTooltip(
+                `<div>
+                     Nexxus Guadalupe - C2 - 41 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1083fdaaf2bc8c04b0d6cfa567d75713 = L.circleMarker(
+                [25.778880725, -100.460981273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1083fdaaf2bc8c04b0d6cfa567d75713.bindTooltip(
+                `<div>
+                     Parque Industrial Garcia - C1 - 513 sin - 10 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37ad9752eaaaa7c8708b889f047a3f84 = L.circleMarker(
+                [25.75623824333333, -100.14116437285716],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_37ad9752eaaaa7c8708b889f047a3f84.bindTooltip(
+                `<div>
+                     Zona_41 - C1 - 357 sin - 21 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08b9c025c1203f317f919c1bae301d0e = L.circleMarker(
+                [25.678866498, -100.48314969999998],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.45, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_08b9c025c1203f317f919c1bae301d0e.bindTooltip(
+                `<div>
+                     Zona_42 - C1 - 169 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ac6ae48730803a6e2413223f98069bd = L.circleMarker(
+                [25.674482418000004, -100.206605216],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_9ac6ae48730803a6e2413223f98069bd.bindTooltip(
+                `<div>
+                     Zona_43 - C1 - 263 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f20efde3ee230e6bab9e4f2323dec34b = L.circleMarker(
+                [25.708229851217947, -100.23925482346156],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f20efde3ee230e6bab9e4f2323dec34b.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-4 - C1 - 515 sin - 19 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e85e2c1f93cf09deea47ab743bfba168 = L.circleMarker(
+                [25.78926194787879, -100.44218663030304],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.45, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_e85e2c1f93cf09deea47ab743bfba168.bindTooltip(
+                `<div>
+                     Zona_45 - C1 - 309 sin - 33 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49066f12cf8f7a50bcd2bcaa3335eece = L.circleMarker(
+                [25.764861276, -100.229874706],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_49066f12cf8f7a50bcd2bcaa3335eece.bindTooltip(
+                `<div>
+                     Zona_46 - C1 - 116 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f6b6fe5ad945edbc0ccbc37fe45b480 = L.circleMarker(
+                [25.72703770428572, -100.5201604],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_5f6b6fe5ad945edbc0ccbc37fe45b480.bindTooltip(
+                `<div>
+                     VYNMSA Santa Catarina Industrial Park - C0 - 47 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d48e290d9e72ba5f144c1f29e1c2532f = L.circleMarker(
+                [25.789808574, -100.16034605],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.2, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d48e290d9e72ba5f144c1f29e1c2532f.bindTooltip(
+                `<div>
+                     Zona_48 - C1 - 124 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c306d7ab97646367c837424a35e6250c = L.circleMarker(
+                [25.75812026, -100.30889370909092],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c306d7ab97646367c837424a35e6250c.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-5 - C1 - 805 sin - 11 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a218386cfcab8ca69912f59604d17795 = L.circleMarker(
+                [25.77862098565217, -100.14016273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a218386cfcab8ca69912f59604d17795.bindTooltip(
+                `<div>
+                     Zona_52 - C1 - 83 sin - 46 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a23eedd9deb0bad286d45d3dd32d12ea = L.circleMarker(
+                [25.714056003333337, -100.27224866333334],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.95, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a23eedd9deb0bad286d45d3dd32d12ea.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-6 - C1 - 259 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5a30c31b80b3ae5818f11da07cb6204 = L.circleMarker(
+                [25.75952052586207, -100.17707272586208],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.0, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a5a30c31b80b3ae5818f11da07cb6204.bindTooltip(
+                `<div>
+                     HubsPark Apodaca - C1 - 220 sin - 29 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5d7d0ac75819499dd3885a7029f62fa = L.circleMarker(
+                [25.702916076, -100.498089046],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_e5d7d0ac75819499dd3885a7029f62fa.bindTooltip(
+                `<div>
+                     Regio Parque Industrial Santa Catarina - C1 - 148 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0105ffff6fd89fe2d8688edb0b28e113 = L.circleMarker(
+                [25.83270848428572, -100.23210128428572],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.25, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_0105ffff6fd89fe2d8688edb0b28e113.bindTooltip(
+                `<div>
+                     Zona_60 - C1 - 165 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57dcb8f7004010654e0c2dca695a5e8f = L.circleMarker(
+                [25.72690387, -100.28619689888887],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_57dcb8f7004010654e0c2dca695a5e8f.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-7 - C1 - 228 sin - 9 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dcba1b8d155d44fd583e3edeebc5879a = L.circleMarker(
+                [25.73630752, -100.15442825166669],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_dcba1b8d155d44fd583e3edeebc5879a.bindTooltip(
+                `<div>
+                     Zona_62 - C1 - 480 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b52a92a1f7d4202db68124d7de20ab1 = L.circleMarker(
+                [25.793165151666667, -100.29777972],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6b52a92a1f7d4202db68124d7de20ab1.bindTooltip(
+                `<div>
+                     Zona_63 - C1 - 271 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_100ffc69fad3e0a1ec0ab4b440400a54 = L.circleMarker(
+                [25.737950971818183, -100.2072772390909],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_100ffc69fad3e0a1ec0ab4b440400a54.bindTooltip(
+                `<div>
+                     Zona_65 - C1 - 314 sin - 11 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa382e3950339ecf41b978ab32c07582 = L.circleMarker(
+                [25.73649793857143, -100.25003070142856],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.8, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_fa382e3950339ecf41b978ab32c07582.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-8 - C1 - 276 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ad0ac21bfe7a089594a34ca8803835f = L.circleMarker(
+                [25.752738395, -100.17456565],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.2, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6ad0ac21bfe7a089594a34ca8803835f.bindTooltip(
+                `<div>
+                     HubsPark Apodaca - C1 - 204 sin - 12 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8633edd3b3ff502ac0aeb29bfd6c025f = L.circleMarker(
+                [25.776075960000004, -100.421928696],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8633edd3b3ff502ac0aeb29bfd6c025f.bindTooltip(
+                `<div>
+                     Zona_70 - C1 - 1079 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9540db1b13b46de525161600c2454d2 = L.circleMarker(
+                [25.76361183875, -100.2087460625],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d9540db1b13b46de525161600c2454d2.bindTooltip(
+                `<div>
+                     Zona_71 - C1 - 191 sin - 8 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f88edb6f74438ff07405cf60f79d1d3f = L.circleMarker(
+                [25.79508390625, -100.30429733],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f88edb6f74438ff07405cf60f79d1d3f.bindTooltip(
+                `<div>
+                     Zona_72 - C1 - 740 sin - 8 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a01c229ac3c242ecc78fd9d6ead9a8f = L.circleMarker(
+                [25.69501603, -100.5088411325],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1a01c229ac3c242ecc78fd9d6ead9a8f.bindTooltip(
+                `<div>
+                     Zona_73 - C1 - 64 sin - 8 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47a5a07574d7ea84e81620f3fa0480c1 = L.circleMarker(
+                [25.72899785125, -100.250362055],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.6, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_47a5a07574d7ea84e81620f3fa0480c1.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-9 - C1 - 192 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_437952220c25e8797b64d641c935bbb8 = L.circleMarker(
+                [25.702987881428573, -100.22358001857144],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.25, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_437952220c25e8797b64d641c935bbb8.bindTooltip(
+                `<div>
+                     Zona_82 - C1 - 305 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb74e67be430f7020dece06118804e78 = L.circleMarker(
+                [25.819847476, -100.249024102],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.05, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_bb74e67be430f7020dece06118804e78.bindTooltip(
+                `<div>
+                     Zona_83 - C1 - 121 sin - 10 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_63fe52a545a190912cf54abcd8749ae4 = L.circleMarker(
+                [25.699329352272727, -100.13195739954546],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_63fe52a545a190912cf54abcd8749ae4.bindTooltip(
+                `<div>
+                     FINSA Guadalupe - C1 - 314 sin - 12 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96668d721692a1a40fa6fee3310ce90a = L.circleMarker(
+                [25.689445423333336, -100.13257585833333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_96668d721692a1a40fa6fee3310ce90a.bindTooltip(
+                `<div>
+                     FINSA Guadalupe - C0 - 19 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43c2a3279e4910c96d9242788690ddb7 = L.circleMarker(
+                [25.682921194, -100.460121982],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.9, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_43c2a3279e4910c96d9242788690ddb7.bindTooltip(
+                `<div>
+                     Zona_89 - C1 - 258 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0666b84c3524bc1f1f37436f04111f77 = L.circleMarker(
+                [25.813358964000003, -100.293833939],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_0666b84c3524bc1f1f37436f04111f77.bindTooltip(
+                `<div>
+                     Zona_93 - C1 - 135 sin - 10 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d4c326c85630a303ebf089c7c06f581 = L.circleMarker(
+                [25.823372758571427, -100.30177058],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.35, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_4d4c326c85630a303ebf089c7c06f581.bindTooltip(
+                `<div>
+                     Zona_94 - C1 - 207 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d04378aacb39a993e41ec7ace11aaed = L.circleMarker(
+                [25.785326923636365, -100.1477204981818],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_3d04378aacb39a993e41ec7ace11aaed.bindTooltip(
+                `<div>
+                     Zona_96 - C1 - 371 sin - 11 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_489bc692c80ea3976331aff1e3b0a6b2 = L.circleMarker(
+                [25.825133482, -100.262070642],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_489bc692c80ea3976331aff1e3b0a6b2.bindTooltip(
+                `<div>
+                     Puerta del Norte Logistics Park - C2 - 17 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_654818bda75fa4ef808952bd5f25d947 = L.circleMarker(
+                [25.758043926, -99.989037766],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_654818bda75fa4ef808952bd5f25d947.bindTooltip(
+                `<div>
+                     Kia Motors Industrial Park - C0 - 29 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8dd035be1276b24f751c63c01dbcda51 = L.circleMarker(
+                [25.79566121333333, -100.12360597333333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8dd035be1276b24f751c63c01dbcda51.bindTooltip(
+                `<div>
+                     Zona_102 - C2 - 17 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06d7bc0c21c1413272b3344fc779739a = L.circleMarker(
+                [25.720071202857145, -100.53098673],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_06d7bc0c21c1413272b3344fc779739a.bindTooltip(
+                `<div>
+                     FINSA Santa Catarina - C2 - 6 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57ff6ac7d2415a7d9e769d9552d98432 = L.circleMarker(
+                [25.7438997, -100.239588274],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_57ff6ac7d2415a7d9e769d9552d98432.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-10 - C1 - 131 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac8a9ec720d0ebd1065b169c4cd8473b = L.circleMarker(
+                [25.77704680428572, -100.19050977142857],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ac8a9ec720d0ebd1065b169c4cd8473b.bindTooltip(
+                `<div>
+                     Zona_119 - C1 - 880 sin - 7 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec4e763ed37211fb1c92828211795d63 = L.circleMarker(
+                [25.775797635, -100.11452251666668],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ec4e763ed37211fb1c92828211795d63.bindTooltip(
+                `<div>
+                     Zona_124 - C2 - 41 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e0f31232a6d1175a9e6665a65ae770c = L.circleMarker(
+                [25.73390138666667, -100.199088415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8e0f31232a6d1175a9e6665a65ae770c.bindTooltip(
+                `<div>
+                     Zona_125 - C1 - 154 sin - 6 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b6c3422dad50d10d1c3768d6b3cc5c7 = L.circleMarker(
+                [25.753655234, -100.285192804],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_7b6c3422dad50d10d1c3768d6b3cc5c7.bindTooltip(
+                `<div>
+                     Corredor Industrial SN-11 - C1 - 1504 sin - 5 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6124850ce016e164fdfab809ded00848 = L.circleMarker(
+                [25.826307463, -100.27420491],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6124850ce016e164fdfab809ded00848.bindTooltip(
+                `<div>
+                     GP Escobedo SIC Industrial Park - C-1 - 3 sin - 10 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b1bd8084d0aa84273abdfa2b6e43671 = L.circleMarker(
+                [25.68517324, -100.4636096],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1b1bd8084d0aa84273abdfa2b6e43671.bindTooltip(
+                `<div>
+                     GRIFFITH FOODS - C3 - 275 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de8297bea97083d3a38f18e30aec779f = L.circleMarker(
+                [25.82067693, -100.36390146],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_de8297bea97083d3a38f18e30aec779f.bindTooltip(
+                `<div>
+                     HERSHEY S - C3 - 143 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dded217a635603d7d9ee9a34d64cf02 = L.circleMarker(
+                [25.7152691, -100.26813293],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_2dded217a635603d7d9ee9a34d64cf02.bindTooltip(
+                `<div>
+                     PASTELERIA LETY MATRIZ - C3 - 513 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_803967e4d4e20a3aa825d7cbeb7c5ea5 = L.circleMarker(
+                [25.69669126, -100.48540288],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_803967e4d4e20a3aa825d7cbeb7c5ea5.bindTooltip(
+                `<div>
+                     SPRAYLAB - C2 - 13 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be9663019c4e5a9b5eb1196766f1b143 = L.circleMarker(
+                [25.82386555, -100.36134498],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.1, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_be9663019c4e5a9b5eb1196766f1b143.bindTooltip(
+                `<div>
+                     SUKARNE AGROINDUSTRIAL - C3 - 202 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9fd477ddd8cd39ec3d148231ae1bcc74 = L.circleMarker(
+                [25.66502412, -100.44883431],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_9fd477ddd8cd39ec3d148231ae1bcc74.bindTooltip(
+                `<div>
+                     CATO - C3 - 429 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a874a6f3705b416cd64eacf6600054c8 = L.circleMarker(
+                [25.7343902, -100.29067819],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a874a6f3705b416cd64eacf6600054c8.bindTooltip(
+                `<div>
+                     COPAMEX CORRUGADOS - C3 - 334 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_defa09ad0d507bfd1e377e83557d70c5 = L.circleMarker(
+                [25.8429525, -100.25153583],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_defa09ad0d507bfd1e377e83557d70c5.bindTooltip(
+                `<div>
+                     CYAN LABS - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85699425430d725ba4595f12c033e449 = L.circleMarker(
+                [25.66611451, -100.2161985],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_85699425430d725ba4595f12c033e449.bindTooltip(
+                `<div>
+                     EVCO PLASTICS DE MEXICO - C3 - 486 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5d135b2a323f51731a439c075208eff3 = L.circleMarker(
+                [25.69652839, -100.15059268],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_5d135b2a323f51731a439c075208eff3.bindTooltip(
+                `<div>
+                     FLUID MASTER - C2 - 66 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4790dd1bfd355e9d2f1d5195128b24da = L.circleMarker(
+                [25.71724533, -100.5395444],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_4790dd1bfd355e9d2f1d5195128b24da.bindTooltip(
+                `<div>
+                     GAIM REGIOMONTANA (AGP) - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2563bc0e66b993993c48122bc6ff120 = L.circleMarker(
+                [25.68832202, -100.45079439],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c2563bc0e66b993993c48122bc6ff120.bindTooltip(
+                `<div>
+                     IACNA MEXICO - C3 - 704 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ef8b0e30f18c0843f1b79c91e63e4c5 = L.circleMarker(
+                [25.7500873, -100.22442461],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.8, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_3ef8b0e30f18c0843f1b79c91e63e4c5.bindTooltip(
+                `<div>
+                     INDUSTRIAS TUK - C0 - 96 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a91d7d3b16a6677e3524c9e1241d1d2 = L.circleMarker(
+                [25.66927773, -100.0931217],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6a91d7d3b16a6677e3524c9e1241d1d2.bindTooltip(
+                `<div>
+                     KOHLER SANIMEX - C3 - 188 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f91e08a822dbd52bfdfe44dcefa1973f = L.circleMarker(
+                [25.80934885, -100.08280927],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f91e08a822dbd52bfdfe44dcefa1973f.bindTooltip(
+                `<div>
+                     LADRILLERA MECANIZADA PLANTA - C2 - 74 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0239168421b8f65f2b44bf8dac9447cf = L.circleMarker(
+                [25.67971457, -100.1110144],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_0239168421b8f65f2b44bf8dac9447cf.bindTooltip(
+                `<div>
+                     LAMOSA PLANTA BENITO JUAREZ - C2 - 135 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52786aa55243788b508915c0a429c20d = L.circleMarker(
+                [25.67416868, -100.15487285],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_52786aa55243788b508915c0a429c20d.bindTooltip(
+                `<div>
+                     LISI AUTOMOTIVE MONTERREY - C2 - 43 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1980df5a0bd47ae62e71b0a43d26545 = L.circleMarker(
+                [25.71637193, -100.47774159],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_b1980df5a0bd47ae62e71b0a43d26545.bindTooltip(
+                `<div>
+                     LUBRICANTES DE AMERICA - C2 - 34 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9eaa1f836cda9bbc96edf33164d276bb = L.circleMarker(
+                [25.69125864, -100.14414216],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_9eaa1f836cda9bbc96edf33164d276bb.bindTooltip(
+                `<div>
+                     PAPEL Y EMPAQUES GONDI MONTERREY - C0 - 18 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23be7976f64366f96630c94803a704e3 = L.circleMarker(
+                [25.72355142, -100.1991933],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_23be7976f64366f96630c94803a704e3.bindTooltip(
+                `<div>
+                     PINTURAS OSEL - C3 - 163 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d91d93127f41cfc3438538c5664961a = L.circleMarker(
+                [25.67957942, -100.11079302],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_4d91d93127f41cfc3438538c5664961a.bindTooltip(
+                `<div>
+                     PORCELANA CORONA DE MEXICO - C0 - 45 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d270bbb4b2a74c64d47720fe2a35f10c = L.circleMarker(
+                [25.68902325, -100.51353127],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d270bbb4b2a74c64d47720fe2a35f10c.bindTooltip(
+                `<div>
+                     REFRACTARIOS ALFRAN MEXICO - C2 - 45 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74d6296cda57209f37d8124784467614 = L.circleMarker(
+                [25.599625, -100.117045],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_74d6296cda57209f37d8124784467614.bindTooltip(
+                `<div>
+                     SHOWER WALLS - C2 - 29 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6da4ffc9f6fd816ff50a933da534d626 = L.circleMarker(
+                [25.78945254, -100.17083838],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6da4ffc9f6fd816ff50a933da534d626.bindTooltip(
+                `<div>
+                     THERMO FISHER SCIENTIFIC MONTERREY - C3 - 123 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74842f932abaae459f596fe021e1fd68 = L.circleMarker(
+                [25.7708456, -100.5590158],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_74842f932abaae459f596fe021e1fd68.bindTooltip(
+                `<div>
+                     VIDRIO PLANO DE MEXICO - C0 - 160 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_705cbd700922d5133e862b67859017ba = L.circleMarker(
+                [25.67773427, -100.24785423],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_705cbd700922d5133e862b67859017ba.bindTooltip(
+                `<div>
+                     WATPRO SDERLMI - C3 - 960 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7dfef3481156424cbd9dbf67b0af8bee = L.circleMarker(
+                [25.74610075, -100.31699151],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_7dfef3481156424cbd9dbf67b0af8bee.bindTooltip(
+                `<div>
+                     ZINC NACIONAL - C3 - 1040 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58f7bb9085b07ac6adfa9a3b6308b240 = L.circleMarker(
+                [25.79675082, -100.25419651],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_58f7bb9085b07ac6adfa9a3b6308b240.bindTooltip(
+                `<div>
+                     ABASTECEDORA HADROK - C3 - 611 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c108e8809ff485ae7d54a6b94bd2c81 = L.circleMarker(
+                [25.8006697, -100.09816876],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_4c108e8809ff485ae7d54a6b94bd2c81.bindTooltip(
+                `<div>
+                     ACUMULADORES OMEGA - C3 - 160 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9eac079feb61e0f8effaceaaecb7de46 = L.circleMarker(
+                [25.76496825, -100.21441194],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_9eac079feb61e0f8effaceaaecb7de46.bindTooltip(
+                `<div>
+                     ADVANCED STEEL TECHNOLOGY DE MEXICO - C2 - 56 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba03f0d05579f52284e1b734d92673cd = L.circleMarker(
+                [25.71834933, -100.17339602],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ba03f0d05579f52284e1b734d92673cd.bindTooltip(
+                `<div>
+                     BAXTER - C3 - 442 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_948fe6057a72004b10579f9455821408 = L.circleMarker(
+                [25.81613356, -100.27299658],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_948fe6057a72004b10579f9455821408.bindTooltip(
+                `<div>
+                     BREMBO MEXICO - C3 - 177 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea61d30aba2e72b9af2fcabb9dcd13e9 = L.circleMarker(
+                [25.6965219, -100.15023253],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ea61d30aba2e72b9af2fcabb9dcd13e9.bindTooltip(
+                `<div>
+                     BRG SPORTS - C0 - 49 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb7a2cde05b15a8ae3a3e994f51baa91 = L.circleMarker(
+                [25.70605667, -100.51599516],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_fb7a2cde05b15a8ae3a3e994f51baa91.bindTooltip(
+                `<div>
+                     CARRIER MEXICO - C3 - 137 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98e925be20b7cf7d70283ed189a64209 = L.circleMarker(
+                [25.73325233, -100.52314301],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_98e925be20b7cf7d70283ed189a64209.bindTooltip(
+                `<div>
+                     CATERPILLAR MEXICO - C0 - 33 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f62a73657900d7479c1bffcb4efb249a = L.circleMarker(
+                [25.72593822, -100.29035681],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.05, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f62a73657900d7479c1bffcb4efb249a.bindTooltip(
+                `<div>
+                     CERREY - C3 - 301 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_548315d5b5f75dbeb5d600e0f8adf07d = L.circleMarker(
+                [25.79619529, -100.28027471],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.2, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_548315d5b5f75dbeb5d600e0f8adf07d.bindTooltip(
+                `<div>
+                     COAVIS MEXICO - C2 - 84 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7e11d9e34ed34651fa1c9591a0d915c = L.circleMarker(
+                [25.79644793, -100.27924649],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.1, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_b7e11d9e34ed34651fa1c9591a0d915c.bindTooltip(
+                `<div>
+                     COAVIS MEXICO - C3 - 222 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ddeca5c0066104108e2e14eb81d404b = L.circleMarker(
+                [25.68353229, -100.48859741],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1ddeca5c0066104108e2e14eb81d404b.bindTooltip(
+                `<div>
+                     COFLEX - C3 - 373 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_220b0772536119ea171877f14fb04b17 = L.circleMarker(
+                [25.77572708, -100.21580366],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_220b0772536119ea171877f14fb04b17.bindTooltip(
+                `<div>
+                     COMMOSA - C3 - 388 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ce05f582646afdd57afaca4aa6895736 = L.circleMarker(
+                [25.72082783, -100.25144957],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ce05f582646afdd57afaca4aa6895736.bindTooltip(
+                `<div>
+                     CONDUCTORES MONTERREY - C3 - 467 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f51f601ef2f445fab5fa87fe1049739e = L.circleMarker(
+                [25.74280727, -100.18279067],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.65, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f51f601ef2f445fab5fa87fe1049739e.bindTooltip(
+                `<div>
+                     CORPORACION MITSUBA DE MEXICO - C3 - 293 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d69b72eb2461406e673c4ee43b711d2e = L.circleMarker(
+                [25.7605725, -100.55510889],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.25, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d69b72eb2461406e673c4ee43b711d2e.bindTooltip(
+                `<div>
+                     CORPORACION PIPSA - C2 - 105 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_153c29a569a59030170dca6c80f9943f = L.circleMarker(
+                [25.7547857, -99.98820344],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_153c29a569a59030170dca6c80f9943f.bindTooltip(
+                `<div>
+                     DAEHAN SOLUTION MEXICO MONTERREY - C-1 - 4 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3660e81f8d73c0f9eb3549d6fc3198f1 = L.circleMarker(
+                [25.74802614, -100.52832566],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_3660e81f8d73c0f9eb3549d6fc3198f1.bindTooltip(
+                `<div>
+                     DAIMLER VEHICULOS COMERCIALES MEXICO PLANTA GARCIA - C3 - 277 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_893c78fa77f2a7b9e6319e9e0f52c09f = L.circleMarker(
+                [25.7363703, -100.243238],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_893c78fa77f2a7b9e6319e9e0f52c09f.bindTooltip(
+                `<div>
+                     DESING VISUAL CREATION - C3 - 174 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6240e114770f9dc1837c597945f7c366 = L.circleMarker(
+                [25.76007806, -99.99618028],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6240e114770f9dc1837c597945f7c366.bindTooltip(
+                `<div>
+                     DONGHEE MÉXICO - C0 - 24 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b07766d935ed2d8108f67e8cd99ce3e1 = L.circleMarker(
+                [25.8016054, -100.255398],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_b07766d935ed2d8108f67e8cd99ce3e1.bindTooltip(
+                `<div>
+                     FABRICA INDUSTRIAL MADERERA - C2 - 57 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d521ce1f932a48cb95c2f6024c5740f9 = L.circleMarker(
+                [25.72305198, -100.53459187],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d521ce1f932a48cb95c2f6024c5740f9.bindTooltip(
+                `<div>
+                     FRIGUS BOHN - C-1 - 1 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93a919dab18c21ba45ba37b5718291dc = L.circleMarker(
+                [25.67773165, -100.43457474],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_93a919dab18c21ba45ba37b5718291dc.bindTooltip(
+                `<div>
+                     FRISA FORJADOS - C2 - 97 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3eea75d0d0c996f9ee8fd66d04e4783c = L.circleMarker(
+                [25.67773223, -100.43457454],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_3eea75d0d0c996f9ee8fd66d04e4783c.bindTooltip(
+                `<div>
+                     FRISA FORJADOS PLANTA AEROSPACE - C3 - 334 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a679d0626102d49ab479892ac8a8fa6 = L.circleMarker(
+                [25.778126, -100.18067516],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_7a679d0626102d49ab479892ac8a8fa6.bindTooltip(
+                `<div>
+                     GRAFTECH MEXICO - C3 - 569 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c66c6e908b952865c63dcd840a3c1cd4 = L.circleMarker(
+                [25.83078446, -100.24123927],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c66c6e908b952865c63dcd840a3c1cd4.bindTooltip(
+                `<div>
+                     GRUPO COLLADO - C2 - 108 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a351b96a5db1e91c1741d84b8d9559cd = L.circleMarker(
+                [25.81628249, -100.2593488],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.3, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a351b96a5db1e91c1741d84b8d9559cd.bindTooltip(
+                `<div>
+                     GRUPO RYL - C2 - 86 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d05b6d1dabec5db0d2bdb0edb28fc32 = L.circleMarker(
+                [25.66941331, -100.23519487],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1d05b6d1dabec5db0d2bdb0edb28fc32.bindTooltip(
+                `<div>
+                     HARRIS PRODUCS GRUP - C3 - 417 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6af17388f9ff6fbc6ea2c0bcd6d50b25 = L.circleMarker(
+                [25.73879133, -99.99011635],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_6af17388f9ff6fbc6ea2c0bcd6d50b25.bindTooltip(
+                `<div>
+                     HYUNDAI WIA MEXICO - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58b225399bac228992f04d08826a790d = L.circleMarker(
+                [25.70082884, -100.48335117],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_58b225399bac228992f04d08826a790d.bindTooltip(
+                `<div>
+                     INDUSTRIAS ISLAS - C2 - 14 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e35356eb76206cc3d34ac193b59a86c1 = L.circleMarker(
+                [25.67138035, -100.16998517],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.8, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_e35356eb76206cc3d34ac193b59a86c1.bindTooltip(
+                `<div>
+                     INTERMEX YIN LUN - C0 - 96 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_907c1e2de14bba76b262008ebbc56731 = L.circleMarker(
+                [25.76433678, -100.57304542],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_907c1e2de14bba76b262008ebbc56731.bindTooltip(
+                `<div>
+                     JOHNSON CONTROLS ENTERPRISES MEXICO - C2 - 36 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7990f9b63237cf2762be7826511ad4e6 = L.circleMarker(
+                [25.80613808, -100.20943604],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_7990f9b63237cf2762be7826511ad4e6.bindTooltip(
+                `<div>
+                     JOYSON SAFETY SYSTEMS - C3 - 188 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca26daac501c13c6a2eb3faa7a448f1c = L.circleMarker(
+                [25.71905928, -100.52791918],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ca26daac501c13c6a2eb3faa7a448f1c.bindTooltip(
+                `<div>
+                     KATCON - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_485853183e29742df158eba781d1484c = L.circleMarker(
+                [25.64870172, -100.1873256],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.25, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_485853183e29742df158eba781d1484c.bindTooltip(
+                `<div>
+                     KEMET DE MEXICO - C3 - 345 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b4d40d930f37680e33301c12a1014db = L.circleMarker(
+                [25.75675076, -99.99615961],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8b4d40d930f37680e33301c12a1014db.bindTooltip(
+                `<div>
+                     KIA MEXICO - C-1 - 3 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dac1d5ff48eff7808f83a487afcca1c1 = L.circleMarker(
+                [25.78795626, -100.16589119],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_dac1d5ff48eff7808f83a487afcca1c1.bindTooltip(
+                `<div>
+                     LENOVO CENTRO TECNOLOGICO - C2 - 49 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd108a1de9fd2d488f30a2ed7487ae78 = L.circleMarker(
+                [25.73780263, -100.28958817],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_cd108a1de9fd2d488f30a2ed7487ae78.bindTooltip(
+                `<div>
+                     LEON CORTE ACERO - C3 - 705 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05df4b9484d8557f24bf6483a583dd59 = L.circleMarker(
+                [25.73902703, -100.52456569],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_05df4b9484d8557f24bf6483a583dd59.bindTooltip(
+                `<div>
+                     MACOR DE MEXICO SUC GARCIA - C0 - 51 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2aca8c41b203c62b8cf1a6ba27767bc = L.circleMarker(
+                [25.73878767, -100.23986081],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.9, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a2aca8c41b203c62b8cf1a6ba27767bc.bindTooltip(
+                `<div>
+                     MAQUILACERO - C3 - 298 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0fd8013fdd7772144d73fd398aedbee7 = L.circleMarker(
+                [25.82305326, -100.33943788],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.35, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_0fd8013fdd7772144d73fd398aedbee7.bindTooltip(
+                `<div>
+                     MONTOI - C2 - 87 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d34424c5de2263725cfb45224abf9521 = L.circleMarker(
+                [25.84699581, -100.3203799],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d34424c5de2263725cfb45224abf9521.bindTooltip(
+                `<div>
+                     NAVISTAR MEXICO - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_683e87edc4d483f9d2c9de3158a29fca = L.circleMarker(
+                [25.74248243, -100.5170589],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_683e87edc4d483f9d2c9de3158a29fca.bindTooltip(
+                `<div>
+                     NEMAK MEXICO - C0 - 70 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72cfe4063848c647a8ca633f6ec99fa0 = L.circleMarker(
+                [25.71953068, -100.11550964],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_72cfe4063848c647a8ca633f6ec99fa0.bindTooltip(
+                `<div>
+                     NORTH POLE STAR - C3 - 171 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_acdc5ca304a2f026ed06df2b8bc74ca9 = L.circleMarker(
+                [25.69101426, -100.5054789],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_acdc5ca304a2f026ed06df2b8bc74ca9.bindTooltip(
+                `<div>
+                     NUTEC BICKLEY - C2 - 115 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17945ff8c0a9788b516a1e970d9a008c = L.circleMarker(
+                [25.80057312, -100.09788916],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.65, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_17945ff8c0a9788b516a1e970d9a008c.bindTooltip(
+                `<div>
+                     PRIME POWER OMEGA - C3 - 153 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f156f1c71b3d174432b099e42cbcb79c = L.circleMarker(
+                [25.76043035, -100.1193492],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f156f1c71b3d174432b099e42cbcb79c.bindTooltip(
+                `<div>
+                     REGAL REXNOR - C3 - 197 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be9d8e9ef46a4bb401e54b4173c17e20 = L.circleMarker(
+                [25.70822214, -100.2786234],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_be9d8e9ef46a4bb401e54b4173c17e20.bindTooltip(
+                `<div>
+                     RUGO - C3 - 1206 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1618248e39570b297a500f0772017ef0 = L.circleMarker(
+                [25.81418189, -100.37215328],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1618248e39570b297a500f0772017ef0.bindTooltip(
+                `<div>
+                     SAE TOWERS MEXICO - C2 - 88 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2338be73ef0a4b7e60b9f0d04666288 = L.circleMarker(
+                [25.69687956, -100.16385405],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.5, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d2338be73ef0a4b7e60b9f0d04666288.bindTooltip(
+                `<div>
+                     SANMINA SCI SYSTEMS DE MEXICO - C3 - 350 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8afef35d30da6cd10693b8a723522052 = L.circleMarker(
+                [25.69591451, -100.14286542],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_8afef35d30da6cd10693b8a723522052.bindTooltip(
+                `<div>
+                     SEMEX - C2 - 95 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7e1435c4dc6a9926c8855293b3fb987 = L.circleMarker(
+                [25.7827112, -100.28491078],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c7e1435c4dc6a9926c8855293b3fb987.bindTooltip(
+                `<div>
+                     SISAMEX PLANTA ENSAMBLE - C3 - 560 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_885e459c6828a9e8e0167e85bc345d5a = L.circleMarker(
+                [25.75456302, -99.99612656],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_885e459c6828a9e8e0167e85bc345d5a.bindTooltip(
+                `<div>
+                     SUNGWOO HITECH MEXICO - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2687426f942523b8b7355272d99d70ff = L.circleMarker(
+                [25.81841417, -100.3860506],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_2687426f942523b8b7355272d99d70ff.bindTooltip(
+                `<div>
+                     TALLER INDUSTRIAL PIONERO - C3 - 554 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31a80a676f99a1102484abb4ae749b6c = L.circleMarker(
+                [25.65811717, -100.13386465],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.7, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_31a80a676f99a1102484abb4ae749b6c.bindTooltip(
+                `<div>
+                     TALLERES LOZANO - C3 - 354 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecba05279895e6c7da375690123c90b7 = L.circleMarker(
+                [25.73198356, -99.98713371],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_ecba05279895e6c7da375690123c90b7.bindTooltip(
+                `<div>
+                     TERNIUM PESQUERIA - C-1 - 1 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19b1e2317d96eb17f1f21a558d089eab = L.circleMarker(
+                [25.72116088, -100.30737905],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_19b1e2317d96eb17f1f21a558d089eab.bindTooltip(
+                `<div>
+                     TERNIUM PLANOS GUERRERO - C3 - 1583 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9534ca176771fc9300c8bb0023399b71 = L.circleMarker(
+                [25.72047443, -100.30944507],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_9534ca176771fc9300c8bb0023399b71.bindTooltip(
+                `<div>
+                     TERNIUM REVESTIDOS UNIVERSIDAD - C3 - 1158 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f2d4bc94daff66f13889b42f9f55014b = L.circleMarker(
+                [25.71619851, -100.30421703],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f2d4bc94daff66f13889b42f9f55014b.bindTooltip(
+                `<div>
+                     TERNIUM TPG - C3 - 993 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_346264ffc13f0fd023769386911d448a = L.circleMarker(
+                [25.6982565, -100.1801142],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_346264ffc13f0fd023769386911d448a.bindTooltip(
+                `<div>
+                     TORREY - C0 - 115 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b7f04230db4b762b2a1a9a5538e2828 = L.circleMarker(
+                [25.69847018, -100.1800929],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_2b7f04230db4b762b2a1a9a5538e2828.bindTooltip(
+                `<div>
+                     TORREY - C2 - 22 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a0cb1a3930f93921b65ad98af9faa49f = L.circleMarker(
+                [25.85055906, -100.2438197],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_a0cb1a3930f93921b65ad98af9faa49f.bindTooltip(
+                `<div>
+                     VALMONT MONTERREY - C2 - 12 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6f2497881392f2bd9d51c675454a526 = L.circleMarker(
+                [25.73241496, -100.53031343],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_d6f2497881392f2bd9d51c675454a526.bindTooltip(
+                `<div>
+                     WOLONG ELECTRIC INDUSTRIAL MOTORS - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1adff518b45a577d7efc8fd959e49e3e = L.circleMarker(
+                [25.83691847, -100.31351915],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_1adff518b45a577d7efc8fd959e49e3e.bindTooltip(
+                `<div>
+                     AUTO EXPRESS EL CHARQUEÑO - C2 - 22 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_847641f4c9914d3a48d5cfd98fc00a99 = L.circleMarker(
+                [25.82346573, -100.2954923],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.55, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_847641f4c9914d3a48d5cfd98fc00a99.bindTooltip(
+                `<div>
+                     AUTO LINEAS AMERICA - C3 - 251 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57441190daefd3e159d6c5c36b1c8fad = L.circleMarker(
+                [25.65469851, -100.08723205],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_57441190daefd3e159d6c5c36b1c8fad.bindTooltip(
+                `<div>
+                     CASETA DE RUTA 223 - C3 - 540 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e67d6454b558e0da7f50d99ecd8c5a6a = L.circleMarker(
+                [25.83553966, -100.26229722],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_e67d6454b558e0da7f50d99ecd8c5a6a.bindTooltip(
+                `<div>
+                     CORSA TRANSPORTES - C-1 - 0 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3854a0841177e20faf1e26da13569dcc = L.circleMarker(
+                [25.8008344, -100.3700387],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_3854a0841177e20faf1e26da13569dcc.bindTooltip(
+                `<div>
+                     ENLACES PERIFERICOS DEL NORTE - C3 - 386 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31d2e7df70d199f64303046c0aeb415c = L.circleMarker(
+                [25.75608546, -100.255051],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_31d2e7df70d199f64303046c0aeb415c.bindTooltip(
+                `<div>
+                     LOGICORP MEXICO - C3 - 912 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c64e847edf993cac61de71034bb7ca21 = L.circleMarker(
+                [25.81965377, -100.3338179],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.85, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c64e847edf993cac61de71034bb7ca21.bindTooltip(
+                `<div>
+                     REDLOGISTICA - C3 - 157 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_069e64243eec0ec7b287af00417a0000 = L.circleMarker(
+                [25.84214652, -100.31332774],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_069e64243eec0ec7b287af00417a0000.bindTooltip(
+                `<div>
+                     SERVICIO DE TRANSPORTACIÓN JAGUAR - C2 - 14 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c381d2c0f91889c2c2bbe47eacb2b5f9 = L.circleMarker(
+                [25.77838161, -100.1991947],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.3, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c381d2c0f91889c2c2bbe47eacb2b5f9.bindTooltip(
+                `<div>
+                     SERVICIOS INTEGRADOS MILAN - C3 - 206 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7432e1138e3f62d5c665592ea182f6c5 = L.circleMarker(
+                [25.70317634, -100.48051011],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.05, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_7432e1138e3f62d5c665592ea182f6c5.bindTooltip(
+                `<div>
+                     TERMINAL DE ALMACENAMIENTO Y DESPACHO SANTA CATARINA N.L. - C2 - 81 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_224fed6cab2a22c91ed878f23004732a = L.circleMarker(
+                [25.77744825, -100.021458],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_224fed6cab2a22c91ed878f23004732a.bindTooltip(
+                `<div>
+                     TRANSERVICIOS LOGISTICOS DEL NORTE - C2 - 83 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_334371f9db0b5fbfb53e6b429a8340ce = L.circleMarker(
+                [25.8687509, -100.24981664],
+                {"bubblingMouseEvents": true, "color": "lightgray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgray", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_334371f9db0b5fbfb53e6b429a8340ce.bindTooltip(
+                `<div>
+                     TRANSLIQUIDOS DEL NORTE - C-1 - 2 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_481f8bcd607c1f88d256c428bf79ad81 = L.circleMarker(
+                [25.62253418, -100.0637818],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.4, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_481f8bcd607c1f88d256c428bf79ad81.bindTooltip(
+                `<div>
+                     TRANSPORTE Y SERVICIOS STN - C2 - 88 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd4a77b64a318aad0d13ac27e6bdf7d9 = L.circleMarker(
+                [25.76263746, -100.23760347],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_cd4a77b64a318aad0d13ac27e6bdf7d9.bindTooltip(
+                `<div>
+                     TRANSPORTES INTERNACIONALES ALCOSA - C3 - 343 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_934ed00efedce39eec55c5e96d26877b = L.circleMarker(
+                [25.78596866, -100.479565],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_934ed00efedce39eec55c5e96d26877b.bindTooltip(
+                `<div>
+                     TRANSPORTES ORTA, S.A. DE CV. - C3 - 438 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3da0e08bf7cb96c856a4247a4ed92ba = L.circleMarker(
+                [25.7856804, -100.47825906],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.95, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c3da0e08bf7cb96c856a4247a4ed92ba.bindTooltip(
+                `<div>
+                     TRANSPORTES ORTAS.A. DE C.V. - C3 - 179 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a8e1be34c8758973ff431b11fdf7d1c = L.circleMarker(
+                [25.79150712, -100.41140291],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_3a8e1be34c8758973ff431b11fdf7d1c.bindTooltip(
+                `<div>
+                     TRANSPORTES PERIFERICOS LOCARO - C3 - 490 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5fab209c612ce70f6f6d66e499405fb = L.circleMarker(
+                [25.65763332, -100.1874303],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.75, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_c5fab209c612ce70f6f6d66e499405fb.bindTooltip(
+                `<div>
+                     TRANSPORTES URBANOS RUTA 93  - C3 - 235 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f66917d0acc80f67b92298103b59e680 = L.circleMarker(
+                [25.82353472, -100.105092],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.15, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_f66917d0acc80f67b92298103b59e680.bindTooltip(
+                `<div>
+                     TRASPORTES DEL ORIENTE - C3 - 303 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_143b0541ec0d9d91e929a2e9cd1ed0bb = L.circleMarker(
+                [25.78003423, -100.29174158],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_143b0541ec0d9d91e929a2e9cd1ed0bb.bindTooltip(
+                `<div>
+                     XCF MATRIZ - C3 - 775 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_743eba3bb7dab9ec778a38303294bd02 = L.circleMarker(
+                [25.81032602, -100.2152407],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.3, "stroke": true, "weight": 3}
+            ).addTo(map_f2c9754d43c26e302a6280f5ae9e37ce);
+        
+    
+            circle_marker_743eba3bb7dab9ec778a38303294bd02.bindTooltip(
+                `<div>
+                     TRANSPORTE CARGA SEGURA - C3 - 346 sin - 1 emp
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

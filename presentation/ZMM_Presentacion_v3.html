@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZMM Movilidad Predictiva</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:     #F97316;
+      --orange-dk:  #C2410C;
+      --orange-lt:  #FED7AA;
+      --orange-xs:  #FFF7ED;
+      --cream:      #FFFAF4;
+      --text:       #1C1917;
+      --text-soft:  #57534E;
+      --white:      #FFFFFF;
+      --border:     #FDE8D0;
+      --shadow:     0 2px 16px rgba(249,115,22,.10);
+    }
+
+    html, body {
+      width: 100%; height: 100%;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    #deck {
+      width: 100vw; height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 48px 72px;
+      opacity: 0;
+      transform: translateX(60px);
+      transition: opacity .45s ease, transform .45s ease;
+      pointer-events: none;
+    }
+    .slide.active {
+      opacity: 1; transform: translateX(0);
+      pointer-events: all;
+    }
+    .slide.exit-left {
+      opacity: 0; transform: translateX(-60px);
+    }
+
+    .slide.title-slide { background: var(--cream); }
+    .title-slide .tag {
+      font-size: .8rem; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--orange);
+      border: 1.5px solid var(--orange-lt);
+      background: var(--orange-xs); border-radius: 20px;
+      padding: 6px 18px; margin-bottom: 28px;
+    }
+    .title-slide h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900; line-height: 1.1;
+      text-align: center; max-width: 820px;
+      color: var(--text);
+    }
+    .title-slide h1 span { color: var(--orange); }
+    .title-slide .sub {
+      margin-top: 24px; font-size: 1.15rem;
+      color: var(--text-soft); text-align: center; max-width: 600px;
+    }
+    .title-slide .stats-row {
+      display: flex; gap: 40px; margin-top: 48px;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .stat-box { text-align: center; }
+    .stat-box .num {
+      font-size: 2rem; font-weight: 800; color: var(--orange);
+    }
+    .stat-box .lbl {
+      font-size: .8rem; color: var(--text-soft); margin-top: 2px;
+    }
+
+    .slide-content { background: var(--cream); }
+    .slide-header {
+      width: 100%; margin-bottom: 28px;
+    }
+    .slide-header .part-pill {
+      display: inline-block;
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--orange-dk);
+      background: var(--orange-lt); border-radius: 20px;
+      padding: 4px 14px; margin-bottom: 10px;
+    }
+    .slide-header h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 800; color: var(--text); line-height: 1.2;
+    }
+    .slide-header .lead {
+      margin-top: 8px; font-size: 1rem;
+      color: var(--text-soft); max-width: 680px;
+    }
+
+    .cols { display: flex; gap: 28px; width: 100%; align-items: flex-start; }
+    .cols.center { align-items: center; }
+    .col { flex: 1; }
+    .col-2 { flex: 2; }
+
+    .card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 {
+      font-size: .95rem; font-weight: 700;
+      color: var(--orange-dk); margin-bottom: 10px;
+    }
+    .card p, .card li {
+      font-size: .88rem; color: var(--text-soft); line-height: 1.6;
+    }
+    .card ul { padding-left: 1.1rem; }
+
+    /* source cards */
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+    .source-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+      box-shadow: var(--shadow);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .source-icon {
+      font-size: 1.6rem;
+      width: 42px; height: 42px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--orange-xs); border-radius: 12px;
+      flex-shrink: 0;
+    }
+    .source-card .s-title {
+      font-size: .78rem; font-weight: 700;
+      color: var(--text); margin-bottom: 1px;
+    }
+    .source-card .s-num {
+      font-size: 1.05rem; font-weight: 800; color: var(--orange);
+    }
+    .source-card .s-desc {
+      font-size: .68rem; color: var(--text-soft); margin-top: 1px;
+      line-height: 1.3;
+    }
+
+    .img-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .img-card img {
+      width: 100%; height: auto; display: block;
+    }
+    .img-card .caption {
+      padding: 10px 16px;
+      font-size: .78rem; color: var(--text-soft);
+      border-top: 1px solid var(--border);
+      font-style: italic;
+    }
+
+    .big-quote {
+      font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+      font-weight: 700; line-height: 1.35;
+      color: var(--text); max-width: 760px;
+      text-align: center;
+    }
+    .big-quote span { color: var(--orange); }
+
+    .highlight-row {
+      display: flex; gap: 16px; width: 100%;
+      flex-wrap: wrap;
+    }
+    .hl-box {
+      flex: 1; min-width: 140px;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 18px 16px;
+      text-align: center; box-shadow: var(--shadow);
+    }
+    .hl-box .hl-num {
+      font-size: 1.6rem; font-weight: 800; color: var(--orange);
+    }
+    .hl-box .hl-lbl {
+      font-size: .78rem; color: var(--text-soft); margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .risk-meter {
+      display: flex; flex-direction: column; gap: 10px;
+      width: 100%;
+    }
+    .risk-row {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--white); border-radius: 12px;
+      border: 1.5px solid var(--border);
+      padding: 14px 18px;
+    }
+    .risk-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .risk-label {
+      font-weight: 800; font-size: .95rem;
+      min-width: 50px;
+    }
+    .risk-desc {
+      flex: 1; font-size: .8rem; color: var(--text-soft);
+      line-height: 1.4;
+    }
+    .risk-val {
+      font-size: .72rem; font-weight: 700;
+      color: var(--orange-dk);
+      background: var(--orange-xs);
+      padding: 4px 10px; border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .fail-card {
+      background: #FEF2F2; border: 1.5px solid #FECACA;
+      border-radius: 14px; padding: 16px 18px;
+    }
+    .fail-card h4 {
+      font-size: .88rem; font-weight: 700;
+      color: #991B1B; margin-bottom: 4px;
+    }
+    .fail-card p {
+      font-size: .8rem; color: #7F1D1D; line-height: 1.5;
+    }
+
+    /* feature ranking */
+    .feat-list {
+      display: flex; flex-direction: column; gap: 8px;
+      width: 100%;
+    }
+    .feat-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 10px; padding: 10px 14px;
+      box-shadow: var(--shadow);
+    }
+    .feat-rank {
+      font-size: 1.1rem; font-weight: 800; color: var(--orange);
+      width: 24px; text-align: center;
+      flex-shrink: 0;
+    }
+    .feat-name {
+      font-weight: 700; font-size: .82rem;
+      color: var(--text);
+      min-width: 130px;
+      font-family: 'Consolas', 'Monaco', monospace;
+    }
+    .feat-desc {
+      flex: 1; font-size: .74rem;
+      color: var(--text-soft); line-height: 1.4;
+    }
+
+    .hs-table {
+      width: 100%; border-collapse: collapse;
+      font-size: .8rem;
+    }
+    .hs-table th {
+      text-align: left; padding: 10px 14px;
+      background: var(--orange-xs); color: var(--orange-dk);
+      font-weight: 700; font-size: .72rem;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    .hs-table td {
+      padding: 10px 14px;
+      border-top: 1px solid var(--border);
+      color: var(--text-soft);
+    }
+    .badge {
+      display: inline-block; padding: 3px 9px;
+      border-radius: 10px; font-weight: 700;
+      font-size: .72rem;
+    }
+    .badge-alto { background: #FEE2E2; color: #991B1B; }
+    .badge-medio { background: #FEF3C7; color: #92400E; }
+
+    .learning-list {
+      display: flex; flex-direction: column; gap: 14px;
+      width: 100%; max-width: 880px;
+    }
+    .learning-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 18px 22px;
+      box-shadow: var(--shadow);
+    }
+    .learning-icon {
+      font-size: 1.5rem; flex-shrink: 0;
+      width: 42px; height: 42px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--orange-xs); border-radius: 12px;
+    }
+    .l-title {
+      font-weight: 800; color: var(--text);
+      font-size: .95rem; margin-bottom: 4px;
+    }
+    .l-desc {
+      font-size: .82rem; color: var(--text-soft); line-height: 1.5;
+    }
+
+    /* iframe */
+    .iframe-wrap {
+      width: 100%; flex: 1; min-height: 0;
+      display: flex; flex-direction: column;
+    }
+    .iframe-wrap iframe {
+      width: 100%; flex: 1;
+      border: none; border-radius: 12px;
+      box-shadow: var(--shadow);
+      min-height: 380px;
+    }
+    .iframe-caption {
+      padding: 8px 4px 0;
+      font-size: .74rem; color: var(--text-soft);
+      font-style: italic; line-height: 1.5;
+    }
+
+    /* NAV */
+    #nav {
+      position: fixed; bottom: 18px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; align-items: center; gap: 14px;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 30px; padding: 8px 16px;
+      box-shadow: var(--shadow);
+      z-index: 100;
+    }
+    #nav button {
+      background: none; border: none; cursor: pointer;
+      font-size: .85rem; font-weight: 700;
+      color: var(--orange-dk); padding: 6px 12px;
+      border-radius: 18px;
+      transition: background .15s;
+    }
+    #nav button:hover:not(:disabled) {
+      background: var(--orange-xs);
+    }
+    #nav button:disabled {
+      opacity: .35; cursor: not-allowed;
+    }
+    #nav .counter {
+      font-size: .8rem; color: var(--text-soft);
+      min-width: 60px; text-align: center;
+    }
+    #progress {
+      position: fixed; top: 0; left: 0;
+      height: 3px; background: var(--orange);
+      transition: width .4s ease;
+      z-index: 200;
+    }
+
+    #dots {
+      display: flex; gap: 6px;
+    }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--orange-lt); cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .dot.active {
+      background: var(--orange); transform: scale(1.3);
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div id="deck">
+
+  <!-- ═══════════ SLIDE 1 — TÍTULO ═══════════ -->
+  <div class="slide title-slide active" id="s0">
+    <div class="tag">Zona Metropolitana de Monterrey · 2023–2025</div>
+    <h1>ZMM <span>Movilidad</span><br>Predictiva</h1>
+    <p class="sub">¿Qué factores determinan el riesgo vial en las zonas industriales de Monterrey,<br>y cómo se puede predecir cuándo y dónde es más peligroso conducir?</p>
+    <p style="margin-top:20px; font-size:1.3rem; font-weight:700; color:var(--orange-dk); text-align:center; line-height:1.5;">
+      En la ZMM ocurre un accidente vial cada 8 minutos.<br>
+      <span style="font-weight:500; font-size:1.05rem; color:var(--text-soft);">1 de cada 4, a menos de 2 km de una zona industrial.</span>
+    </p>
+    <div class="stats-row">
+      <div class="stat-box"><div class="num">203,890</div><div class="lbl">siniestros registrados</div></div>
+      <div class="stat-box"><div class="num">183</div><div class="lbl">zonas industriales</div></div>
+      <div class="stat-box"><div class="num">35,064</div><div class="lbl">horas analizadas</div></div>
+      <div class="stat-box"><div class="num">8</div><div class="lbl">municipios industriales</div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 2 — LA PRIMERA PREGUNTA ═══════════ -->
+  <div class="slide slide-content" id="s1">
+    <div class="slide-header">
+      <div class="part-pill">Parte I · La pregunta original</div>
+      <h2>¿Cuánto tardan los trabajadores en llegar a los parques industriales?</h2>
+      <p class="lead">Y más importante: ¿qué zonas entrarán en colapso vial en los próximos 3 años?</p>
+    </div>
+    <div class="cols center">
+      <div class="col">
+        <div class="card">
+          <h3>El contexto</h3>
+          <ul>
+            <li>La ZMM concentra uno de los corredores industriales más activos del país</li>
+            <li>183 parques y zonas industriales distribuidos en 8 municipios</li>
+            <li>Cientos de miles de trabajadores con turno fijo entran y salen simultáneamente</li>
+            <li>Nadie había modelado ese flujo con datos reales y granularidad horaria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3>Lo que íbamos a construir</h3>
+          <ul>
+            <li>Tiempos de traslado hacia cada zona industrial, hora por hora</li>
+            <li>Modelo predictivo: ¿cuándo se satura cada corredor?</li>
+            <li>Horizonte de 3 años: zonas en riesgo de colapso</li>
+          </ul>
+          <p style="margin-top:12px; font-style:italic; color:#A8A29E;">
+            Era una pregunta legítima. El problema fue conseguir los datos para responderla.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 3 — LO QUE SÍ TENÍAMOS ═══════════ -->
+  <div class="slide slide-content" id="s2">
+    <div class="slide-header">
+      <div class="part-pill">Parte I · Los datos que encontramos</div>
+      <h2>Lo que sí teníamos: siniestros, clima, eventos y empresas</h2>
+      <p class="lead">Cruzamos cuatro fuentes distintas para construir una imagen real de la movilidad industrial.</p>
+    </div>
+    <div class="cols center">
+      <div class="col-2 img-card">
+        <img src="./concentracion_siniestros_hora_x_dia_semana.png" alt="Heatmap hora × día">
+        <div class="caption">Heatmap hora × día de la semana. Rojo intenso = más accidentes. El bloque de 14–16h entre semana resalta con fuerza: ese es el cruce de turnos industriales, no la hora pico tradicional.</div>
+      </div>
+      <div class="col">
+        <div class="source-grid">
+          <div class="source-card">
+            <div class="source-icon">🚨</div>
+            <div>
+              <div class="s-title">Siniestros</div>
+              <div class="s-num">203,890</div>
+              <div class="s-desc">RATIV / OCISEVI 2023–2025</div>
+            </div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">🌧️</div>
+            <div>
+              <div class="s-title">Clima horario</div>
+              <div class="s-num">0 nulos</div>
+              <div class="s-desc">Open-Meteo · Aeropuerto MTY</div>
+            </div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">🎉</div>
+            <div>
+              <div class="s-title">Eventos masivos</div>
+              <div class="s-num">148</div>
+              <div class="s-desc">Curados manualmente</div>
+            </div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon">🏭</div>
+            <div>
+              <div class="s-title">Empresas industriales</div>
+              <div class="s-num">2,187</div>
+              <div class="s-desc">DENUE >30 empleados</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 4 — MAPA INTERACTIVO NB06 ═══════════ -->
+  <div class="slide slide-content" id="s3">
+    <div class="slide-header">
+      <div class="part-pill">Parte I · El mapa real</div>
+      <h2>Así se ve la accidentalidad en el mapa de la ZMM</h2>
+      <p class="lead">Mapa interactivo de calor: cada concentración roja es donde los siniestros caen dentro del radio de un parque industrial real.</p>
+    </div>
+    <div class="iframe-wrap">
+      <iframe src="./nb06_heatmap_final.html"></iframe>
+      <div class="iframe-caption">Mapa generado con clustering espacial <strong>DBSCAN</strong> sobre 2,187 establecimientos industriales (DENUE) y proximidad <strong>Haversine de 2 km</strong>. Cada zona está segmentada por <strong>masa laboral</strong> — la suma de empleados aproximados de las empresas que la componen. 44.7% de los siniestros georreferenciados ocurren dentro del radio industrial.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 5 — LA SUPER TABLA ═══════════ -->
+  <div class="slide slide-content" id="s4">
+    <div class="slide-header">
+      <div class="part-pill">Parte I · Lo que quedó</div>
+      <h2>35,064 horas · 29 variables · una base de datos única</h2>
+      <p class="lead">Cada fila es una hora del calendario entre 2023 y 2025, con todo el contexto disponible para ese momento.</p>
+    </div>
+    <div class="highlight-row" style="margin-bottom: 20px;">
+      <div class="hl-box"><div class="hl-num">35,064</div><div class="hl-lbl">horas registradas</div></div>
+      <div class="hl-box"><div class="hl-num">29</div><div class="hl-lbl">variables por hora</div></div>
+      <div class="hl-box"><div class="hl-num">148</div><div class="hl-lbl">eventos masivos curados</div></div>
+      <div class="hl-box"><div class="hl-num">3</div><div class="hl-lbl">años de cobertura</div></div>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="card">
+          <h3>Temporales</h3>
+          <p>hora, día, mes, tipo de día, intensidad hora pico, fin de semana</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3>Climáticas</h3>
+          <p>temperatura, nivel de lluvia en 5 categorías (Open-Meteo, 0 nulos)</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3>Eventos masivos</h3>
+          <p>impacto activo, nivel de aforo, rolling -3h de acumulación de tráfico</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3>Siniestros</h3>
+          <p>conteo por municipio industrial, distancia a zona, siniestros en radio 2 km</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 6 — LO QUE NO PUDIMOS LOGRAR ═══════════ -->
+  <div class="slide slide-content" id="s5">
+    <div class="slide-header">
+      <div class="part-pill">Parte I · El bloqueo</div>
+      <h2>Lo que no pudimos lograr, y por qué</h2>
+      <p class="lead">Teníamos la base de datos. Pero los datos de tiempos de traslado nunca llegaron.</p>
+    </div>
+    <div class="cols">
+      <div class="col" style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="fail-card">
+          <h4>TomTom: cobertura insuficiente</h4>
+          <p>Solo cubría 5 de los 183 parques industriales — sin selección sistemática ni histórico horario cruzable.</p>
+        </div>
+        <div class="fail-card">
+          <h4>Sin serie de tiempo real</h4>
+          <p>Los datos disponibles eran snapshots puntuales. No existía el histórico horario necesario para entrenar un modelo de predicción de tiempos.</p>
+        </div>
+        <div class="fail-card">
+          <h4>No hay API pública de tráfico histórico en Monterrey</h4>
+          <p>Las alternativas consultadas (HERE, Google Maps) no ofrecen datos históricos descargables de forma gratuita ni para esta granularidad.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="height: 100%;">
+          <h3>La decisión</h3>
+          <p style="margin-bottom: 14px;">En vez de forzar una respuesta con datos insuficientes, dejamos que los datos mismos nos dijeran hacia dónde ir.</p>
+          <p style="margin-bottom: 14px;">Ya teníamos 203,890 siniestros con granularidad horaria, coordenadas y 29 variables de contexto. Todo el trabajo previo ya apuntaba hacia el riesgo vial.</p>
+          <p style="font-style: italic; color: var(--orange-dk);">El pivot fue natural: de predecir tiempos a predecir riesgo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 7 — LA NUEVA PREGUNTA ═══════════ -->
+  <div class="slide slide-content" id="s6">
+    <div class="slide-header">
+      <div class="part-pill">Parte II · La nueva pregunta</div>
+      <h2>¿Cuándo y dónde es más peligroso conducir cerca de zonas industriales?</h2>
+    </div>
+    <div class="cols center">
+      <div class="col-2">
+        <p class="big-quote">
+          No es <span>"¿cuánto tardas en llegar?"</span><br>
+          Es <span>"¿en qué situación te pone la carretera"</span><br>cuando manejas cerca de un parque industrial.
+        </p>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="card">
+          <h3>Tres preguntas concretas</h3>
+          <ul>
+            <li>¿Qué tipologías de zonas industriales existen según su perfil de riesgo?</li>
+            <li>¿Qué factores del contexto determinan ese riesgo?</li>
+            <li>¿Se puede predecir el nivel de peligro solo con información disponible de antemano?</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>La respuesta en 3 modelos</h3>
+          <p>M1: Clustering de zonas (¿cómo se agrupan?)<br>
+             M2: Clasificación (¿bajo, medio o alto riesgo?)<br>
+             M3: Regresión (¿cuántos accidentes esperar?)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 8 — MODELO 1: CLUSTERING DE ZONAS ═══════════ -->
+  <div class="slide slide-content" id="s7">
+    <div class="slide-header">
+      <div class="part-pill">Parte II · Modelo 1 · Clustering</div>
+      <h2>No todas las zonas industriales se comportan igual</h2>
+      <p class="lead">Agrupamos las 183 zonas por su perfil real de siniestros. Encontramos <strong>4 tipologías</strong> distintas en el mapa de Monterrey.</p>
+    </div>
+    <div class="cols" style="flex: 1; min-height: 0;">
+      <div class="col-2 iframe-wrap">
+        <iframe src="./mapa_zonas_clusters.html"></iframe>
+        <div class="iframe-caption">Mapa interactivo · 169 zonas válidas (≥5 siniestros) · K-Means K=4 · Silhouette 0.31</div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="card" style="padding: 14px 16px;">
+          <h3 style="color:#991B1B;">C0 — Alta gravedad</h3>
+          <p>15 zonas. Mayor tasa de fallecidos (3.4%). Pocos accidentes pero los más severos.</p>
+        </div>
+        <div class="card" style="padding: 14px 16px;">
+          <h3 style="color:#92400E;">C1 — Alta densidad</h3>
+          <p>Volumen alto de siniestros, gravedad media. Corredores con tráfico constante.</p>
+        </div>
+        <div class="card" style="padding: 14px 16px;">
+          <h3 style="color:#166534;">C2 — Riesgo moderado</h3>
+          <p>Zonas con perfil estable. Lesiones promedio, sin picos extremos.</p>
+        </div>
+        <div class="card" style="padding: 14px 16px;">
+          <h3 style="color:#6D28D9;">C3 — Anclas críticas</h3>
+          <p>58 zonas. KIA, Caterpillar, Ternium. Máximo flujo laboral, mayor número de siniestros totales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 9 — MODELO 2: CLASIFICACIÓN ═══════════ -->
+  <div class="slide slide-content" id="s8">
+    <div class="slide-header">
+      <div class="part-pill">Parte II · Modelo 2 · Clasificación</div>
+      <h2>¿Bajo, medio o alto riesgo?</h2>
+      <p class="lead">Dado el contexto de una hora (hora del día, tipo de día, clima, zona), el modelo clasifica el nivel de riesgo esperado.</p>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="card" style="margin-bottom: 14px;">
+          <h3>Qué tan bueno es</h3>
+          <ul>
+            <li><strong>F1 macro test: 0.67</strong> — acierta bien en las 3 categorías</li>
+            <li><strong>Validación temporal 2025: 0.59</strong> — la señal se mantiene en datos que nunca vio</li>
+            <li>El error más frecuente es confundir MEDIO con ALTO o BAJO — no riesgo extremo con calma total</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>En lenguaje directo</h3>
+          <p>El modelo acertaría en <strong>2 de cada 3 clasificaciones</strong> de riesgo para una hora concreta que nunca procesó antes. Eso es relevante cuando el contexto es solo: "son las 3pm, martes, seco, zona C3".</p>
+        </div>
+      </div>
+      <div class="col">
+        <h3 style="font-size:.9rem; font-weight:700; color:var(--orange-dk); margin-bottom:12px;">Los 5 factores que más mueven el riesgo</h3>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-rank">1</div>
+            <div class="feat-name">cluster_hora</div>
+            <div class="feat-desc">El "tipo de hora" — más predictivo que la hora numérica sola</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-rank">2</div>
+            <div class="feat-name">hora_del_día</div>
+            <div class="feat-desc">El riesgo sube hacia 14-16h y cae brusco después de 20h</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-rank">3</div>
+            <div class="feat-name">siniestros_en_zona</div>
+            <div class="feat-desc">Densidad histórica de accidentes en el radio de 2 km</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-rank">4</div>
+            <div class="feat-name">temperatura_c</div>
+            <div class="feat-desc">Proxy del momento del día y estación del año</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-rank">5</div>
+            <div class="feat-name">dist_industrial</div>
+            <div class="feat-desc">Cercanía física a la zona industrial más próxima</div>
+          </div>
+        </div>
+        <p style="margin-top:12px; font-size:.78rem; font-style:italic; color:var(--text-soft);">
+          El modelo aprendió que no es lo mismo "las 3pm" que "las 3pm de un lunes laboral industrial".
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 10 — MODELO 3: REGRESIÓN ═══════════ -->
+  <div class="slide slide-content" id="s9">
+    <div class="slide-header">
+      <div class="part-pill">Parte II · Modelo 3 · Regresión</div>
+      <h2>¿En qué situación te pone la carretera?</h2>
+      <p class="lead">El modelo predice cuántos accidentes esperar en zonas industriales durante la próxima hora. Ese número te dice dónde estás parado.</p>
+    </div>
+    <div class="cols center">
+      <div class="col">
+        <div class="card" style="margin-bottom: 14px;">
+          <h3>¿Qué significa R² = 0.59?</h3>
+          <p>De toda la variación real en accidentes hora a hora, el modelo explica el <strong>59% solo con contexto</strong>: hora del día, tipo de día, clima y zona. Sin saber nada extra.</p>
+          <p style="margin-top: 8px; font-style: italic; color: var(--orange-dk);">El 41% restante son factores que no capturamos: un semáforo roto, un conductor específico, algo imprevisible.</p>
+        </div>
+        <div class="card">
+          <h3>Validación temporal honesta</h3>
+          <p>Entrenamos en 2023-2024, validamos en 2025: <strong>R² = 0.51</strong>. Casi se mantiene — la señal es real, no memorización.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div style="background: var(--white); border: 1.5px solid var(--border); border-radius: 16px; padding: 18px;">
+          <h3 style="font-size:.9rem; font-weight:700; color:var(--orange-dk); margin-bottom:12px;">Lo que el modelo te diría sobre tu viaje</h3>
+          <div class="risk-meter">
+            <div class="risk-row">
+              <div class="risk-dot" style="background:#22C55E;"></div>
+              <div class="risk-label" style="color:#166534;">0 – 2</div>
+              <div class="risk-desc">Zona en calma relativa. Accidentalidad por debajo del promedio.</div>
+              <div class="risk-val">Riesgo bajo</div>
+            </div>
+            <div class="risk-row">
+              <div class="risk-dot" style="background:#F59E0B;"></div>
+              <div class="risk-label" style="color:#92400E;">3 – 5</div>
+              <div class="risk-desc">Zona activa. Tráfico elevado cerca de parques industriales.</div>
+              <div class="risk-val">Maneja con cuidado</div>
+            </div>
+            <div class="risk-row">
+              <div class="risk-dot" style="background:#EF4444;"></div>
+              <div class="risk-label" style="color:#B91C1C;">6 o más</div>
+              <div class="risk-desc">Condición crítica. La franja más peligrosa del año en esa zona.</div>
+              <div class="risk-val">Riesgo alto activo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 11 — HOTSPOTS ═══════════ -->
+  <div class="slide slide-content" id="s10">
+    <div class="slide-header">
+      <div class="part-pill">Parte II · Hallazgos</div>
+      <h2>¿Cuándo es peor? Las combinaciones más peligrosas</h2>
+      <p class="lead">Imagina: es martes, 3 de la tarde, no llueve, manejas por Apodaca cerca de un parque industrial.<br>Según los datos, <strong>ese es exactamente el momento más peligroso del año.</strong> No el viernes por la noche. No en medio de una tormenta.</p>
+    </div>
+    <div class="cols">
+      <div class="col img-card">
+        <img src="./hotspots_visualizacion.png" alt="Top 15 hotspots">
+        <div class="caption">Top 15 hotspots por riesgo promedio e historial de siniestros. Los mapas de calor muestran interacción franja × tipo de día y franja × lluvia.</div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="card">
+          <h3>El hallazgo más importante</h3>
+          <p>El cambio de turno industrial de <strong>14 a 16h</strong> en un día laboral y clima seco genera más accidentes que la hora pico de tráfico general (18-19h).</p>
+          <p style="margin-top: 8px; font-style: italic; color: var(--orange-dk);">No es la "hora pico" tradicional. Es cuando los turnos industriales se cruzan.</p>
+        </div>
+        <div style="background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; overflow: hidden;">
+          <table class="hs-table">
+            <thead>
+              <tr><th>Franja</th><th>Condición</th><th>Riesgo</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cruce de turnos 14-16h</td>
+                <td>Laboral · Seco</td>
+                <td><span class="badge badge-alto">1.44</span></td>
+              </tr>
+              <tr>
+                <td>Pico tarde 16-19h</td>
+                <td>Laboral · Seco</td>
+                <td><span class="badge badge-alto">1.41</span></td>
+              </tr>
+              <tr>
+                <td>Pico tarde 16-19h</td>
+                <td>Laboral · Brisa</td>
+                <td><span class="badge badge-medio">1.33</span></td>
+              </tr>
+              <tr>
+                <td>Pico mañana 7-9h</td>
+                <td>Laboral · Seco</td>
+                <td><span class="badge badge-medio">1.09</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Nota sobre la lluvia</h3>
+          <p>La brisa eleva el riesgo más que la lluvia fuerte. El regiomontano no cambia su comportamiento de frenado ante lluvia leve — eso aparece directo en los datos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SLIDE 12 — CIERRE ═══════════ -->
+  <div class="slide slide-content" id="s11">
+    <div class="slide-header">
+      <div class="part-pill">Cierre</div>
+      <h2>Lo que aprendimos — con honestidad</h2>
+    </div>
+    <div class="learning-list">
+      <div class="learning-item">
+        <div class="learning-icon">📊</div>
+        <div>
+          <div class="l-title">El 80% del trabajo fue construir los datos</div>
+          <div class="l-desc">6 notebooks de Feature Engineering antes del primer modelo. Sin esa base, no hay señal que capturar. La calidad de datos decide el resultado, no el algoritmo.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <div class="learning-icon">🔄</div>
+        <div>
+          <div class="l-title">Dejar que los datos dirijan no es rendirse — es metodología</div>
+          <div class="l-desc">El pivot de tiempos de traslado a riesgo vial no fue una derrota. Fue encontrar la señal más fuerte disponible. Los 203,890 siniestros dijeron más que ningún tiempo de TomTom.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <div class="learning-icon">⏰</div>
+        <div>
+          <div class="l-title">La validación temporal importa más que el accuracy en entrenamiento</div>
+          <div class="l-desc">Un modelo que acierta 99% en datos viejos y falla en datos nuevos no sirve. Entrenamos en 2023-2024, validamos en 2025: F1=0.59, R²=0.51 — señal real, no memorización.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <div class="learning-icon">⚠️</div>
+        <div>
+          <div class="l-title">Limitaciones que reconocemos</div>
+          <div class="l-desc">F1=0.67 es honesto pero no perfecto. 14,017 horas sin coordenadas (principalmente 2023). El timestamp es hora de reporte policial, no del accidente exacto. El modelo describe riesgo — no lo elimina.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="nav">
+  <button id="btnPrev" onclick="go(-1)" disabled>← Anterior</button>
+  <div id="dots"></div>
+  <span class="counter" id="counter">1 / 12</span>
+  <button id="btnNext" onclick="go(1)">Siguiente →</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total  = slides.length;
+  let cur = 0;
+
+  const dotsEl = document.getElementById('dots');
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  }
+
+  function updateUI() {
+    document.getElementById('counter').textContent = `${cur + 1} / ${total}`;
+    document.getElementById('btnPrev').disabled = cur === 0;
+    document.getElementById('btnNext').disabled = cur === total - 1;
+    document.getElementById('progress').style.width = `${((cur + 1) / total) * 100}%`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+  }
+
+  function goTo(next) {
+    if (next < 0 || next >= total) return;
+    slides[cur].classList.remove('active');
+    slides[cur].classList.add('exit-left');
+    setTimeout(() => slides[cur].classList.remove('exit-left'), 500);
+    cur = next;
+    slides[cur].classList.add('active');
+    updateUI();
+  }
+
+  function go(dir) { goTo(cur + dir); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); go(-1); }
+    if (e.key === 'Home') goTo(0);
+    if (e.key === 'End')  goTo(total - 1);
+  });
+
+  updateUI();
+</script>
+</body>
+</html>
