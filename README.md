@@ -17,7 +17,7 @@
 
 ## 1. Contexto
 
-La **Zona Metropolitana de Monterrey (ZMM)** es el segundo polo industrial del país y una de las regiones con mayor densidad de manufactura pesada en Latinoamérica. Para este proyecto se delimitó la ZMM industrial a **8 municipios** con presencia manufacturera verificada:
+La **Zona Metropolitana de Monterrey (ZMM)** es uno de los principales polos industriales del país y una de las regiones con mayor densidad de manufactura pesada en Latinoamérica. Para este proyecto se delimitó la ZMM industrial a **8 municipios** con presencia manufacturera verificada:
 
 | Municipio | Código INEGI | Empresas DENUE industriales |
 |-----------|--------------|-----------------------------|
@@ -32,7 +32,7 @@ La **Zona Metropolitana de Monterrey (ZMM)** es el segundo polo industrial del p
 
 *Filtro SCIAN 31–33 (manufactura) y 48–49 (transporte) con >30 empleados. Ciénega de Flores y Salinas Victoria se excluyeron por datos insuficientes.*
 
-El problema concreto: **alrededor de 60,000 siniestros de tránsito al año** en la ZMM, con un pico sostenido entre las 14:00 y 16:00 — horario que coincide con el cambio de turno de las plantas, no con el tráfico convencional. Esa dinámica industrial tiene efectos propios que el tráfico urbano general no captura.
+El problema concreto: **alrededor de 68,000 siniestros de tránsito al año** en la ZMM, con un pico sostenido entre las 14:00 y 16:00 — horario que coincide con el cambio de turno de las plantas, no con el tráfico convencional. Esa dinámica industrial tiene efectos propios que el tráfico urbano general no captura.
 
 ---
 
@@ -70,7 +70,7 @@ El pivot no fue capricho ni rescate: todo el feature engineering de NB01–NB06 
 
 ### Super Tabla maestra
 
-**`super_tabla_completa.csv` — 35,064 horas × 29 variables.** Una fila por cada hora entre el 1 de enero de 2022 y el 31 de diciembre de 2025. Sin nulos, salvo **14,017 NaN reales** en 4 features espaciales (representan ausencia real de siniestros georreferenciados, no dato faltante — ver sección de Limitaciones).
+**`super_tabla_completa.csv` — 35,064 horas × 29 variables.** Una fila por cada hora entre el 1 de enero de 2023 y el 31 de diciembre de 2026. Sin nulos, salvo **14,017 NaN reales** en 4 features espaciales (representan ausencia real de siniestros georreferenciados, no dato faltante — ver sección de Limitaciones).
 
 Filtrada al rango de modelado 2023-01-01 → 2025-12-31 se obtiene la **`super_tabla_con_clusters.csv`** con 26,304 filas × 30 columnas que alimenta a M2 y M3.
 
@@ -82,19 +82,19 @@ El proyecto está estructurado en 13 notebooks numerados. **NB01–NB06** constr
 
 | NB | Nombre | Rol | Estado |
 |----|--------|-----|--------|
-| 01 | `01_EDA_DENUE.ipynb` | FE espacial — filtrado 2,187 establecimientos industriales | ✅ |
-| 02 | `02_Feature_Engineering_Tiempo.ipynb` | Esqueleto temporal 35,064 horas + calendario laboral | ✅ |
-| 03 | `03_Feature_Engineering_Clima.ipynb` | Integración Open-Meteo + 148 eventos masivos | ✅ |
-| 04 | `04_EDA_OCISEVI.ipynb` | Análisis 203,890 siniestros + tipología de accidente | ✅ |
-| 05 | `05_Feature_Engineering_OCISEVI.ipynb` | Super Tabla 35,064 × 24 | ✅ |
-| 06 | `06_FE_zonas_industriales.ipynb` | Catálogo 183 zonas + BallTree Haversine 2 km | ✅ |
-| 07 | `07_ML_kmeans.ipynb` | **M1** — K-Means K=5 sobre horas del día | ✅ |
-| 08 | `08_Clustering_Zonas_v2.ipynb` | Clustering de zonas industriales K=4 (silhouette 0.31) | ✅ |
-| 09 | `09_Modelo_Clasificacion_v2.ipynb` | **M2** — XGBoost clasifica BAJO/MEDIO/ALTO riesgo | ✅ |
-| 10 | `10_Modelo_Regresion_v2.ipynb` | **M3** — XGBoost predice conteo de siniestros por hora | ✅ |
-| 11 | `11_SHAP_Explicabilidad_v2.ipynb` | Explicabilidad de M2 con SHAP TreeExplainer | ✅ |
-| 12 | `12_Hotspots_v2.ipynb` | Ranking de franjas horarias × contexto por riesgo | ✅ |
-| 13 | `13_Visualizaciones_v2.ipynb` | 4 visualizaciones consolidadas para presentación | ✅ |
+| 01 | [`01_EDA_DENUE.ipynb`](notebooks/01_EDA_DENUE.ipynb) | FE espacial — filtrado 2,187 establecimientos industriales | ✅ |
+| 02 | [`02_Feature_Engineering_Tiempo.ipynb`](notebooks/02_Feature_Engineering_Tiempo.ipynb) | Esqueleto temporal 35,064 horas + calendario laboral | ✅ |
+| 03 | [`03_Feature_Engineering_Clima.ipynb`](notebooks/03_Feature_Engineering_Clima.ipynb) | Integración Open-Meteo + 148 eventos masivos | ✅ |
+| 04 | [`04_EDA_OCISEVI.ipynb`](notebooks/04_EDA_OCISEVI.ipynb) | Análisis 203,890 siniestros + tipología de accidente | ✅ |
+| 05 | [`05_Feature_Engineering_OCISEVI.ipynb`](notebooks/05_Feature_Engineering_OCISEVI.ipynb) | Super Tabla 35,064 × 24 | ✅ |
+| 06 | [`06_FE_zonas_industriales.ipynb`](notebooks/06_FE_zonas_industriales.ipynb) | Catálogo 183 zonas + BallTree Haversine 2 km | ✅ |
+| 07 | [`07_ML_kmeans.ipynb`](notebooks/07_ML_kmeans.ipynb) | **M1** — K-Means K=5 sobre horas del día | ✅ |
+| 08 | [`08_Clustering_Zonas_v2.ipynb`](notebooks/08_Clustering_Zonas_v2.ipynb) | Clustering de zonas industriales K=4 (silhouette 0.31) | ✅ |
+| 09 | [`09_Modelo_Clasificacion_v2.ipynb`](notebooks/09_Modelo_Clasificacion_v2.ipynb) | **M2** — XGBoost clasifica BAJO/MEDIO/ALTO riesgo | ✅ |
+| 10 | [`10_Modelo_Regresion_v2.ipynb`](notebooks/10_Modelo_Regresion_v2.ipynb) | **M3** — XGBoost predice conteo de siniestros por hora | ✅ |
+| 11 | [`11_SHAP_Explicabilidad_v2.ipynb`](notebooks/11_SHAP_Explicabilidad_v2.ipynb) | Explicabilidad de M2 con SHAP TreeExplainer | ✅ |
+| 12 | [`12_Hotspots_v2.ipynb`](notebooks/12_Hotspots_v2.ipynb) | Ranking de franjas horarias × contexto por riesgo | ✅ |
+| 13 | [`13_Visualizaciones_v2.ipynb`](notebooks/13_Visualizaciones_v2.ipynb) | 4 visualizaciones consolidadas para presentación | ✅ |
 
 ![Pipeline completo del proyecto](docs/images/viz_pipeline_completo.png)
 
@@ -232,7 +232,7 @@ Proyecto_ZMM/
 **APIs externas**
 - **Open-Meteo** (gratuita, sin API key) — histórico climático horario
 - **OpenCage Geocoding** — geocodificación inversa con confidence ≥7
-- **TomTom Traffic Stats** *(descartada — solo cubría 5 de 183 parques sin histórico horario)*
+- **TomTom API** *(descartada — solo cubría 5 de 183 parques sin histórico horario)*
 
 **Entorno**
 - Windsurf IDE + Cascade AI
